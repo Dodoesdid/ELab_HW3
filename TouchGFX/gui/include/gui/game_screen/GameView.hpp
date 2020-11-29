@@ -15,6 +15,7 @@ public:
 protected:
 	int min;
 	int sec;
+	int bomb;
 	int tickCount;
 };
 

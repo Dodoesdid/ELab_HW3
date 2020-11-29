@@ -13,8 +13,19 @@ public:
         modelListener = listener;
     }
 
+    void saveBomb(int saveBomb)
+    {
+        bomb = saveBomb;
+    }
+
+    int getBomb()
+    {
+        return bomb;
+    }
+
     void tick();
 protected:
+	int bomb;
     ModelListener* modelListener;
 };
 

@@ -8,6 +8,9 @@ GameView::GameView()
 void GameView::setupScreen()
 {
     GameViewBase::setupScreen();
+    bomb = presenter->getBomb();
+
+    Unicode::snprintf(TotalBombBuffer, TOTALBOMB_SIZE, "%d", bomb);
 }
 
 void GameView::tearDownScreen()

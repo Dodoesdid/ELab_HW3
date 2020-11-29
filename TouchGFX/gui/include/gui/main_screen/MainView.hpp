@@ -7,7 +7,6 @@
 class MainView : public MainViewBase
 {
 public:
-	int counter;
     MainView();
     virtual ~MainView() {}
     virtual void setupScreen();
@@ -25,6 +24,7 @@ public:
     virtual void ButtonPressedC();
     virtual void ButtonPressedE();
 protected:
+	int counter;
 };
 
 #endif // MAINVIEW_HPP

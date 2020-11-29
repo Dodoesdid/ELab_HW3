@@ -25,6 +25,16 @@ public:
      */
     virtual void deactivate();
 
+    void saveBomb(int bomb)
+    {
+        model->saveBomb(bomb);
+    }
+
+    int getBomb()
+    {
+        return model->getBomb();
+    }
+
     virtual ~MainPresenter() {};
 
 private:

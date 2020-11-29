@@ -106,5 +106,5 @@ void MainView::ButtonPressedC()
 
 void MainView::ButtonPressedE()
 {
-
+  presenter->saveBomb(counter);
 }
