@@ -9,7 +9,6 @@
 #include <gui/game_screen/GamePresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/Image.hpp>
-#include <touchgfx/containers/clock/DigitalClock.hpp>
 #include <touchgfx/widgets/Button.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
@@ -30,7 +29,6 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Image Background;
-    touchgfx::DigitalClock digitalClock1;
     touchgfx::Button button2_1;
     touchgfx::Button button3_1;
     touchgfx::Button button4_1;
@@ -153,12 +151,17 @@ protected:
     touchgfx::Button button8_15;
     touchgfx::TextAreaWithOneWildcard TotalBomb;
     touchgfx::TextAreaWithOneWildcard Result;
+    touchgfx::TextAreaWithTwoWildcards Clock;
 
     /*
      * Wildcard Buffers
      */
     static const uint16_t TOTALBOMB_SIZE = 10;
     touchgfx::Unicode::UnicodeChar TotalBombBuffer[TOTALBOMB_SIZE];
+    static const uint16_t CLOCKBUFFER1_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar ClockBuffer1[CLOCKBUFFER1_SIZE];
+    static const uint16_t CLOCKBUFFER2_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar ClockBuffer2[CLOCKBUFFER2_SIZE];
 
 private:
 

@@ -15,13 +15,6 @@ GameViewBase::GameViewBase()
     Background.setXY(0, 0);
     Background.setBitmap(touchgfx::Bitmap(BITMAP_WHITE_ID));
 
-    digitalClock1.setPosition(358, 17, 100, 25);
-    digitalClock1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
-    digitalClock1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID1));
-    digitalClock1.displayLeadingZeroForHourIndicator(true);
-    digitalClock1.setDisplayMode(touchgfx::DigitalClock::DISPLAY_24_HOUR);
-    digitalClock1.setTime24Hour(0, 0, 0);
-
     button2_1.setXY(46, 82);
     button2_1.setBitmaps(touchgfx::Bitmap(BITMAP_TEN_ID), touchgfx::Bitmap(BITMAP_ZERO_ID));
 
@@ -394,9 +387,17 @@ GameViewBase::GameViewBase()
     Result.setLinespacing(0);
     Result.setTypedText(touchgfx::TypedText(T_SINGLEUSEID18));
 
+    Clock.setPosition(358, 17, 92, 25);
+    Clock.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    Clock.setLinespacing(0);
+    touchgfx::Unicode::snprintf(ClockBuffer1, CLOCKBUFFER1_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID22).getText());
+    Clock.setWildcard1(ClockBuffer1);
+    touchgfx::Unicode::snprintf(ClockBuffer2, CLOCKBUFFER2_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID23).getText());
+    Clock.setWildcard2(ClockBuffer2);
+    Clock.setTypedText(touchgfx::TypedText(T_SINGLEUSEID21));
+
     add(__background);
     add(Background);
-    add(digitalClock1);
     add(button2_1);
     add(button3_1);
     add(button4_1);
@@ -519,6 +520,7 @@ GameViewBase::GameViewBase()
     add(button8_15);
     add(TotalBomb);
     add(Result);
+    add(Clock);
 }
 
 void GameViewBase::setupScreen()
