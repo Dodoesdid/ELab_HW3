@@ -20,7 +20,7 @@ GameViewBase::GameViewBase()
     digitalClock1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID1));
     digitalClock1.displayLeadingZeroForHourIndicator(true);
     digitalClock1.setDisplayMode(touchgfx::DigitalClock::DISPLAY_24_HOUR);
-    digitalClock1.setTime24Hour(10, 10, 0);
+    digitalClock1.setTime24Hour(0, 0, 0);
 
     button2_1.setXY(46, 82);
     button2_1.setBitmaps(touchgfx::Bitmap(BITMAP_TEN_ID), touchgfx::Bitmap(BITMAP_ZERO_ID));
@@ -385,6 +385,8 @@ GameViewBase::GameViewBase()
     TotalBomb.setPosition(29, 17, 62, 25);
     TotalBomb.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     TotalBomb.setLinespacing(0);
+    Unicode::snprintf(TotalBombBuffer, TOTALBOMB_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID20).getText());
+    TotalBomb.setWildcard(TotalBombBuffer);
     TotalBomb.setTypedText(touchgfx::TypedText(T_SINGLEUSEID17));
 
     Result.setPosition(202, 17, 38, 25);

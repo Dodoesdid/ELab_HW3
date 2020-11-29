@@ -19,16 +19,10 @@ KEEP extern const touchgfx::GlyphNode glyphs_verdana_20_4bpp[] FONT_TABLE_LOCATI
     {   826, 0x003A,   3,  11,  11,   3,   9,   0,   0, 0x00 },
     {   848, 0x003F,   9,  14,  14,   1,  11,   0,   0, 0x00 },
     {   918, 0x0041,  14,  14,  14,   0,  14,   0,   0, 0x00 },
-    {  1016, 0x0042,  12,  14,  14,   1,  14,   0,   0, 0x00 },
-    {  1100, 0x0043,  13,  14,  14,   1,  14,   0,   0, 0x00 },
-    {  1198, 0x0045,  11,  14,  14,   1,  13,   0,   0, 0x00 },
-    {  1282, 0x004D,  14,  14,  14,   1,  17,   0,   0, 0x00 },
-    {  1380, 0x0050,  11,  14,  14,   1,  12,   0,   0, 0x00 },
-    {  1464, 0x0062,  11,  15,  15,   1,  12,   0,   0, 0x00 },
-    {  1554, 0x0064,  10,  15,  15,   1,  12,   0,   0, 0x00 },
-    {  1629, 0x006D,  17,  11,  11,   1,  19,   0,   0, 0x00 },
-    {  1728, 0x006E,  10,  11,  11,   1,  13,   0,   0, 0x00 },
-    {  1783, 0x006F,  11,  11,  11,   1,  12,   0,   0, 0x00 }
+    {  1016, 0x0043,  13,  14,  14,   1,  14,   0,   0, 0x00 },
+    {  1114, 0x0045,  11,  14,  14,   1,  13,   0,   0, 0x00 },
+    {  1198, 0x004D,  14,  14,  14,   1,  17,   0,   0, 0x00 },
+    {  1296, 0x0050,  11,  14,  14,   1,  12,   0,   0, 0x00 }
 };
 
 // verdana_20_4bpp
@@ -44,6 +38,6 @@ touchgfx::GeneratedFont& getFont_verdana_20_4bpp();
 
 touchgfx::GeneratedFont& getFont_verdana_20_4bpp()
 {
-    static touchgfx::GeneratedFont verdana_20_4bpp(glyphs_verdana_20_4bpp, 24, 20, 0, 4, 1, 0, 0, unicodes_verdana_20_4bpp, kerning_verdana_20_4bpp, 63, 0, 0);
+    static touchgfx::GeneratedFont verdana_20_4bpp(glyphs_verdana_20_4bpp, 18, 20, 0, 4, 1, 0, 0, unicodes_verdana_20_4bpp, kerning_verdana_20_4bpp, 63, 0, 0);
     return verdana_20_4bpp;
 }

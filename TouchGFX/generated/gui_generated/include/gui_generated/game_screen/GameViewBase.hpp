@@ -154,6 +154,12 @@ protected:
     touchgfx::TextAreaWithOneWildcard TotalBomb;
     touchgfx::TextAreaWithOneWildcard Result;
 
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t TOTALBOMB_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar TotalBombBuffer[TOTALBOMB_SIZE];
+
 private:
 
 };

@@ -32,8 +32,9 @@
             "AutoSize": false,
             "LineSpacing": 0,
             "Wildcard1": {
-              "UseBuffer": false,
-              "BufferSize": 0
+              "TextId": "SingleUseId19",
+              "UseBuffer": true,
+              "BufferSize": 10
             },
             "Name": "BombCount",
             "X": 120,
@@ -398,8 +399,8 @@
         ],
         "Interactions": [
           {
-            "InteractionName": "Interaction1",
-            "HasCompletedTrigger": false,
+            "InteractionName": "ChangeScreen",
+            "HasCompletedTrigger": true,
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "ButtonE"
@@ -408,6 +409,150 @@
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "Game"
+            }
+          },
+          {
+            "InteractionName": "Button1",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "Button1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "ButtonPressed1"
+            }
+          },
+          {
+            "InteractionName": "Button2",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "Button2"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "ButtonPressed2"
+            }
+          },
+          {
+            "InteractionName": "Button3",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "Button3"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "ButtonPressed3"
+            }
+          },
+          {
+            "InteractionName": "Button4",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "Button4"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "ButtonPressed4"
+            }
+          },
+          {
+            "InteractionName": "Button5",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "Button5"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "ButtonPressed5"
+            }
+          },
+          {
+            "InteractionName": "Button6",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "Button6"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "ButtonPressed6"
+            }
+          },
+          {
+            "InteractionName": "Button7",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "Button7"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "ButtonPressed7"
+            }
+          },
+          {
+            "InteractionName": "Button8",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "Button8"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "ButtonPressed8"
+            }
+          },
+          {
+            "InteractionName": "Button9",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "Button9"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "ButtonPressed9"
+            }
+          },
+          {
+            "InteractionName": "Button0",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "Button0"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "ButtonPressed0"
+            }
+          },
+          {
+            "InteractionName": "ButtonC",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "ButtonC"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "ButtonPressedC"
+            }
+          },
+          {
+            "InteractionName": "ButtonE",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "ButtonE"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "ButtonPressedE"
             }
           }
         ],
@@ -445,8 +590,8 @@
             "DisplayLeadingZeroForHourIndicator": true,
             "Alpha": 255,
             "UseAmPm": false,
-            "InitialHour": 10,
-            "InitialMinute": 10,
+            "InitialHour": 0,
+            "InitialMinute": 0,
             "InitialSecond": 0,
             "Name": "digitalClock1",
             "X": 358,
@@ -2513,8 +2658,9 @@
             "AutoSize": false,
             "LineSpacing": 0,
             "Wildcard1": {
-              "UseBuffer": false,
-              "BufferSize": 0
+              "TextId": "SingleUseId20",
+              "UseBuffer": true,
+              "BufferSize": 10
             },
             "Name": "TotalBomb",
             "X": 29,
@@ -2627,6 +2773,14 @@
       },
       {
         "TextEntryId": "SingleUseId18",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId19",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId20",
         "IsResource": false
       }
     ],

@@ -19,6 +19,8 @@ MainViewBase::MainViewBase() :
     BombCount.setPosition(120, 24, 200, 25);
     BombCount.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     BombCount.setLinespacing(0);
+    Unicode::snprintf(BombCountBuffer, BOMBCOUNT_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID19).getText());
+    BombCount.setWildcard(BombCountBuffer);
     BombCount.setTypedText(touchgfx::TypedText(T_SINGLEUSEID3));
 
     Button1.setXY(100, 67);
@@ -26,66 +28,77 @@ MainViewBase::MainViewBase() :
     Button1.setLabelText(touchgfx::TypedText(T_SINGLEUSEID4));
     Button1.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     Button1.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    Button1.setAction(buttonCallback);
 
     Button2.setXY(160, 67);
     Button2.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
     Button2.setLabelText(touchgfx::TypedText(T_SINGLEUSEID5));
     Button2.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     Button2.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    Button2.setAction(buttonCallback);
 
     Button3.setXY(220, 67);
     Button3.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
     Button3.setLabelText(touchgfx::TypedText(T_SINGLEUSEID6));
     Button3.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     Button3.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    Button3.setAction(buttonCallback);
 
     Button0.setXY(280, 67);
     Button0.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
     Button0.setLabelText(touchgfx::TypedText(T_SINGLEUSEID7));
     Button0.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     Button0.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    Button0.setAction(buttonCallback);
 
     Button4.setXY(100, 127);
     Button4.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
     Button4.setLabelText(touchgfx::TypedText(T_SINGLEUSEID8));
     Button4.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     Button4.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    Button4.setAction(buttonCallback);
 
     Button5.setXY(160, 127);
     Button5.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
     Button5.setLabelText(touchgfx::TypedText(T_SINGLEUSEID9));
     Button5.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     Button5.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    Button5.setAction(buttonCallback);
 
     Button6.setXY(220, 127);
     Button6.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
     Button6.setLabelText(touchgfx::TypedText(T_SINGLEUSEID11));
     Button6.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     Button6.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    Button6.setAction(buttonCallback);
 
     ButtonC.setXY(280, 127);
     ButtonC.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
     ButtonC.setLabelText(touchgfx::TypedText(T_SINGLEUSEID12));
     ButtonC.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     ButtonC.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    ButtonC.setAction(buttonCallback);
 
     Button7.setXY(100, 187);
     Button7.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
     Button7.setLabelText(touchgfx::TypedText(T_SINGLEUSEID13));
     Button7.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     Button7.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    Button7.setAction(buttonCallback);
 
     Button8.setXY(160, 187);
     Button8.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
     Button8.setLabelText(touchgfx::TypedText(T_SINGLEUSEID14));
     Button8.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     Button8.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    Button8.setAction(buttonCallback);
 
     Button9.setXY(220, 187);
     Button9.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
     Button9.setLabelText(touchgfx::TypedText(T_SINGLEUSEID15));
     Button9.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     Button9.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    Button9.setAction(buttonCallback);
 
     ButtonE.setXY(280, 187);
     ButtonE.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
@@ -118,11 +131,93 @@ void MainViewBase::setupScreen()
 
 void MainViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
 {
-    if (&src == &ButtonE)
+    if (&src == &Button1)
     {
-        //Interaction1
+        //Button1
+        //When Button1 clicked call virtual function
+        //Call ButtonPressed1
+        ButtonPressed1();
+    }
+    else if (&src == &Button2)
+    {
+        //Button2
+        //When Button2 clicked call virtual function
+        //Call ButtonPressed2
+        ButtonPressed2();
+    }
+    else if (&src == &Button3)
+    {
+        //Button3
+        //When Button3 clicked call virtual function
+        //Call ButtonPressed3
+        ButtonPressed3();
+    }
+    else if (&src == &Button0)
+    {
+        //Button0
+        //When Button0 clicked call virtual function
+        //Call ButtonPressed0
+        ButtonPressed0();
+    }
+    else if (&src == &Button4)
+    {
+        //Button4
+        //When Button4 clicked call virtual function
+        //Call ButtonPressed4
+        ButtonPressed4();
+    }
+    else if (&src == &Button5)
+    {
+        //Button5
+        //When Button5 clicked call virtual function
+        //Call ButtonPressed5
+        ButtonPressed5();
+    }
+    else if (&src == &Button6)
+    {
+        //Button6
+        //When Button6 clicked call virtual function
+        //Call ButtonPressed6
+        ButtonPressed6();
+    }
+    else if (&src == &ButtonC)
+    {
+        //ButtonC
+        //When ButtonC clicked call virtual function
+        //Call ButtonPressedC
+        ButtonPressedC();
+    }
+    else if (&src == &Button7)
+    {
+        //Button7
+        //When Button7 clicked call virtual function
+        //Call ButtonPressed7
+        ButtonPressed7();
+    }
+    else if (&src == &Button8)
+    {
+        //Button8
+        //When Button8 clicked call virtual function
+        //Call ButtonPressed8
+        ButtonPressed8();
+    }
+    else if (&src == &Button9)
+    {
+        //Button9
+        //When Button9 clicked call virtual function
+        //Call ButtonPressed9
+        ButtonPressed9();
+    }
+    else if (&src == &ButtonE)
+    {
+        //ChangeScreen
         //When ButtonE clicked change screen to Game
         //Go to Game with no screen transition
         application().gotoGameScreenNoTransition();
+
+        //ButtonE
+        //When ButtonE clicked call virtual function
+        //Call ButtonPressedE
+        ButtonPressedE();
     }
 }

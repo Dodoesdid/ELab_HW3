@@ -19,6 +19,69 @@ public:
     virtual ~MainViewBase() {}
     virtual void setupScreen();
 
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void ButtonPressed1()
+    {
+        // Override and implement this function in Main
+    }
+
+    virtual void ButtonPressed2()
+    {
+        // Override and implement this function in Main
+    }
+
+    virtual void ButtonPressed3()
+    {
+        // Override and implement this function in Main
+    }
+
+    virtual void ButtonPressed4()
+    {
+        // Override and implement this function in Main
+    }
+
+    virtual void ButtonPressed5()
+    {
+        // Override and implement this function in Main
+    }
+
+    virtual void ButtonPressed6()
+    {
+        // Override and implement this function in Main
+    }
+
+    virtual void ButtonPressed7()
+    {
+        // Override and implement this function in Main
+    }
+
+    virtual void ButtonPressed8()
+    {
+        // Override and implement this function in Main
+    }
+
+    virtual void ButtonPressed9()
+    {
+        // Override and implement this function in Main
+    }
+
+    virtual void ButtonPressed0()
+    {
+        // Override and implement this function in Main
+    }
+
+    virtual void ButtonPressedC()
+    {
+        // Override and implement this function in Main
+    }
+
+    virtual void ButtonPressedE()
+    {
+        // Override and implement this function in Main
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());
@@ -42,6 +105,12 @@ protected:
     touchgfx::ButtonWithLabel Button8;
     touchgfx::ButtonWithLabel Button9;
     touchgfx::ButtonWithLabel ButtonE;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t BOMBCOUNT_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar BombCountBuffer[BOMBCOUNT_SIZE];
 
 private:
 
