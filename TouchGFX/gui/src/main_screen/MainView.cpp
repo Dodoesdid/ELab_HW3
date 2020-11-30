@@ -106,5 +106,12 @@ void MainView::ButtonPressedC()
 
 void MainView::ButtonPressedE()
 {
+  // Boundary condition
+  if(counter > 99)
+    counter = 99;
+  if(counter < 5)
+    counter = 5;
+
+  // Save value
   presenter->saveBomb(counter);
 }

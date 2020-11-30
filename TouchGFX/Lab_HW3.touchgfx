@@ -2664,9 +2664,9 @@
               "BufferSize": 0
             },
             "Name": "Result",
-            "X": 202,
+            "X": 189,
             "Y": 17,
-            "Width": 38,
+            "Width": 69,
             "Height": 25,
             "Visible": true,
             "LockPosition": false,
@@ -2710,7 +2710,20 @@
             "Moveable": false
           }
         ],
-        "Interactions": [],
+        "Interactions": [
+          {
+            "InteractionName": "b1_1pressed",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "button1_1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "b1_1pressed"
+            }
+          }
+        ],
         "Name": "Game",
         "OverrideDefaultBufferSize": false,
         "CanvasBufferSize": 0

@@ -6,7 +6,8 @@
 #include "BitmapDatabase.hpp"
 #include <texts/TextKeysAndLanguages.hpp>
 
-GameViewBase::GameViewBase()
+GameViewBase::GameViewBase() :
+    buttonCallback(this, &GameViewBase::buttonCallbackHandler)
 {
 
     __background.setPosition(0, 0, 480, 272);
@@ -131,6 +132,7 @@ GameViewBase::GameViewBase()
 
     button1_1.setXY(46, 57);
     button1_1.setBitmaps(touchgfx::Bitmap(BITMAP_TEN_ID), touchgfx::Bitmap(BITMAP_ZERO_ID));
+    button1_1.setAction(buttonCallback);
 
     button8_5.setXY(146, 232);
     button8_5.setBitmaps(touchgfx::Bitmap(BITMAP_TEN_ID), touchgfx::Bitmap(BITMAP_ZERO_ID));
@@ -382,7 +384,7 @@ GameViewBase::GameViewBase()
     TotalBomb.setWildcard(TotalBombBuffer);
     TotalBomb.setTypedText(touchgfx::TypedText(T_SINGLEUSEID17));
 
-    Result.setPosition(202, 17, 38, 25);
+    Result.setPosition(189, 17, 69, 25);
     Result.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     Result.setLinespacing(0);
     Result.setTypedText(touchgfx::TypedText(T_SINGLEUSEID18));
@@ -526,4 +528,15 @@ GameViewBase::GameViewBase()
 void GameViewBase::setupScreen()
 {
 
+}
+
+void GameViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
+{
+    if (&src == &button1_1)
+    {
+        //b1_1pressed
+        //When button1_1 clicked call virtual function
+        //Call b1_1pressed
+        b1_1pressed();
+    }
 }

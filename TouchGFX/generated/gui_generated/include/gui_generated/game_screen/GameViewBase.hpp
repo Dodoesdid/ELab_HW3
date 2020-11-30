@@ -19,6 +19,14 @@ public:
     virtual ~GameViewBase() {}
     virtual void setupScreen();
 
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void b1_1pressed()
+    {
+        // Override and implement this function in Game
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());
@@ -164,6 +172,16 @@ protected:
     touchgfx::Unicode::UnicodeChar ClockBuffer2[CLOCKBUFFER2_SIZE];
 
 private:
+
+    /*
+     * Callback Declarations
+     */
+    touchgfx::Callback<GameViewBase, const touchgfx::AbstractButton&> buttonCallback;
+
+    /*
+     * Callback Handler Declarations
+     */
+    void buttonCallbackHandler(const touchgfx::AbstractButton& src);
 
 };
 

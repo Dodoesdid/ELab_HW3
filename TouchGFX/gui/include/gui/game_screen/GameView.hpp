@@ -12,11 +12,13 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
     virtual void handleTickEvent();
+    virtual void b1_1pressed();
 protected:
 	int min;
 	int sec;
 	int bomb;
 	int tickCount;
+	char map[8][15];
 };
 
 #endif // GAMEVIEW_HPP
